@@ -1,0 +1,7 @@
+.endereco {
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.0rem; /* Tamanho de fonte adequado */
+    color: #000000; /* Cor do texto */
+    margin-top: 10px; /* Espaçamento acima */
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+}

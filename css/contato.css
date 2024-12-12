@@ -1,0 +1,72 @@
+/* Seção de contato fixa */
+#contato-fixo {
+    
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da lateral direita da tela */
+    width: 300px; /* Largura do cartão */
+    background-color: #fd8608; /* Cor de fundo */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 9999; /* Garante que fique sobre outros elementos */
+}
+
+/* Estilização do título */
+#contato-fixo h2 {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilização do formulário */
+#contato-fixo form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilizando os campos do formulário */
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Estilizando o botão de envio */
+button[type="submit"] {
+    background-color: #ff7002a9;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.9s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e65c00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #contato-fixo {
+        width: 250px; /* Ajusta a largura do cartão em telas menores */
+    }
+
+    #contato-fixo h3 {
+        font-size: 1rem; /* Diminui o tamanho do título */
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte dos inputs e textarea */
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem; /* Diminui o tamanho do botão */
+    }
+}

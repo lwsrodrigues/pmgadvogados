@@ -1,0 +1,19 @@
+/* ICONES */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    color: #333; /* Cor padrão */
+    font-size: 30px; /* Tamanho dos ícones */
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #020100; /* Altere para a cor desejada ao passar o mouse */
+    transform: scale(1.2); /* Efeito de zoom */
+}

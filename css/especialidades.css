@@ -1,0 +1,27 @@
+#especialidades {
+    background-color: #f9f6f4; /* Cor de fundo suave */
+    padding: 50px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto na seção */
+    border-radius: 10px; /* Bordas arredondadas para a seção */
+    margin-top: 20px; /* Espaçamento externo acima */
+}
+
+#especialidades h2 {
+    font-size: 2.5rem; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto */
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+ 
+    letter-spacing: 1.5px; /* Espaçamento entre as letras */
+    position: relative; /* Necessário para a linha decorativa */
+}
+
+#especialidades h2::after {
+    content: ''; /* Linha decorativa abaixo do título */
+    display: block;
+    width: 100%; /* Largura da linha correspondente ao texto */
+    height: 3px; /* Altura da linha */
+    background-color: #ff6f00; /* Cor da linha */
+    margin: 10px auto 0; /* Centraliza a linha */
+}
+

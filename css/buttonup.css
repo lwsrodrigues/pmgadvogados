@@ -1,0 +1,65 @@
+.scroll-button-top {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9); /* Inicialmente menor */
+    background-color: rgba(230, 115, 8, 0.6); /* Efeito fantasma */
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0; /* Inicialmente invisível */
+    pointer-events: none; /* Inicialmente não clicável */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1000;
+    animation: float 3s infinite ease-in-out; /* Efeito de levitação */
+}
+
+/* Efeito fantasma ao passar o mouse */
+.scroll-button-top:hover {
+    transform: translateX(-50%) scale(1.1);
+    background-color: rgba(230, 115, 8, 0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Animação de levitação */
+@keyframes float {
+    0%, 100% {
+        transform: translateX(-50%) translateY(-3px) scale(0.9);
+    }
+    50% {
+        transform: translateX(-50%) translateY(3px) scale(0.9);
+    }
+}
+
+
+/* Botão no final */
+.scroll-button-bottom {
+    position: fixed;
+    bottom: 125px;
+    right: 733px;
+    background-color:  rgba(230, 115, 8, 0.6); /* Efeito fantasma */
+    background-color:  rgba(230, 115, 8, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 80px;
+    box-shadow: 8 9px 9px rgba(1, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0; /* Inicialmente invisível */
+    pointer-events: none; /* Inicialmente não clicável */
+    transition: opacity 0.2s ease; /* Transição suave */
+    animation: float 3s infinite ease-in-out; /* Efeito de levitação */
+    transition: opacity 0.8s ease, transform 0.5s ease;
+}
+
+.scroll-button-bottom:hover {
+    background-color: rgba(230, 115, 8, 0.8);
+    transform: scale(1.1);
+}

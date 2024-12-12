@@ -1,0 +1,89 @@
+/* Resetando margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo para o container da seção */
+#especialidades {
+    padding: 50px 0;
+    background-color: #e4690466;
+}
+
+/* Título da seção */
+#especialidades h2 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Container dos cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+/* Estilo de cada card */
+.card {
+    background-color: #fff;
+    width: 22%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.399);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem dos cards */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Título e descrição dos cards */
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    text-transform: none; /* Garante que o título não será transformado em maiúsculas */
+}
+
+.card p {
+    font-size: 1rem;
+    color: #000000;
+    text-transform: none; /* Garante que a descrição também não será transformada em maiúsculas */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .card {
+        width: 45%; /* Dois cards por linha em telas menores que 1024px */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Um card por linha em telas menores que 768px */
+    }
+
+    #especialidades h2 {
+        font-size: 1.5rem; /* Tamanho do título reduzido */
+    }
+}

@@ -1,0 +1,99 @@
+#faq {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    margin-top: 30px;
+    position: relative; /* Necessário para a sobreposição de imagem */
+    overflow: hidden;
+}
+
+#faq::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('image/70cb658a-9c7a-4854-9340-e12045bb973a.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1; /* Garante que a imagem fique atrás do conteúdo */
+    opacity: 0.4; /* Ajuste a opacidade da imagem de fundo aqui */
+}
+
+
+#faq h2 {
+    font-size: 3rem; /* Aumenta o tamanho do título */
+    color: #010000; /* Cor do texto */
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 1.5px; /* Espaçamento entre letras */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    position: relative;
+}
+
+#faq h2::after {
+    content: ''; /* Linha decorativa abaixo do título */
+    display: block;
+    width: 100%; /* Largura da linha correspondente ao texto */
+    height: 3px; /* Altura da linha */
+    background-color: #ff6f00; /* Cor da linha */
+    margin: 10px auto 0; /* Centraliza a linha */
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%; /* Faz com que o card ocupe 100% da largura disponível */
+    max-width: 600px; /* Limita a largura máxima do card */
+    margin-left: auto; /* Centraliza o card horizontalmente */
+    margin-right: auto; /* Centraliza o card horizontalmente */
+}
+
+.faq-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    background-color: #e47106b4;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #e67308;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f1f1f1;
+    font-size: 1rem;
+    color: #555;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Adicionando animação de transição para mostrar a resposta */
+.faq-answer {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    opacity: 1;
+}

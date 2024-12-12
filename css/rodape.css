@@ -1,0 +1,38 @@
+/* Estilo para o rodapé */
+footer {
+    background-color: #ff7002a9; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .social-icons {
+    margin-bottom: 15px;
+}
+
+footer .social-icon {
+    margin: 0 10px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+footer .social-icon img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1); /* Ícones brancos no fundo escuro */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .social-icon img:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+    filter: brightness(0.8); /* Reduz brilho ao passar o mouse */
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #000000;
+}
+

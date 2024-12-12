@@ -1,0 +1,364 @@
+/* Adicionar overflow-x: hidden para evitar rolagem horizontal indesejada */
+body {
+    background-color: #692d0063;
+    color: #000000;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+header {
+    width: 100%; /* Garantir que a largura do header não ultrapasse a tela */
+    max-width: 1140px;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Espaçamento entre os cards */
+}
+/*botão de cima locali. contanto. sobre. */
+nav a {
+    display: block;
+    width: 110px; /* Ajuste a largura do card */
+    height: 20px; /* Ajuste a altura do card */
+    background-color: #d65d0775;
+    color: white;
+    text-align: center;
+    line-height: 20px; /* Centraliza o texto verticalmente */
+    border-radius: 50px; /* Mantém o arredondamento para forma oval */
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.274);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+nav a:focus {
+    outline: none;
+}
+
+header a {
+    margin-right: 20px;
+}
+
+/* CAROUSEL */
+.carousel {
+    width: 100%; /* Garantir que a largura do carousel não ultrapasse a tela */
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -50px;
+    position: relative;
+}
+
+.carousel .list {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    height: 100%;
+    position: relative;
+}
+
+.carousel .list .item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    top: 20%;
+    width: 80%;
+    left: 10%;
+    transform: translateX(-30%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.838);
+}
+
+.carousel .list .item .content .author {
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.carousel .list .item .content .title,
+.carousel .list .item .content .topic {
+    font-weight: bold;
+    font-size: 5em;
+    margin: 0.3em 0;
+}
+
+.carousel .list .item .content .topic {
+    color: rgba(246, 98, 0, 0.844);
+}
+
+.carousel .list .item .content .des {
+    margin: 1em 0;
+}
+
+.carousel .list .item .content .buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 3fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/*BOTÃO FALAR COM ADVOGADO EFEITO DENTRO*/
+.carousel .list .item .content button {
+    border: none;
+    background-color: #00000061;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* botão falar com advogado*/
+.carousel .list .item .content button:hover {
+    transform: scale(1.3); /* Aumenta o tamanho em 0% */
+    background-color: #f36c0cb4; /* Alteração da cor de fundo */
+    color: #ffffff; /* Altera a cor do texto */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Destaque no botão */
+}
+
+
+
+/* THUMBNAIL */
+.thumbnail {
+    position: absolute;
+    bottom: 60px;
+    left: 70%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+    transform: translateX(-50%);
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.thumbnail .item img:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title {
+    font-weight: bold;
+}
+
+.thumbnail .item .content .des {
+    font-size: 0.9em;
+}
+
+/* SETAS DE NAVEGAÇÃO */
+.arrows {
+    position: absolute;
+    bottom: 0; /* Fixa o elemento na parte inferior */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-90%); /* Ajusta o centro exato */
+    width: auto; /* Deixe a largura automática ou ajuste conforme necessário */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 10vh;
+}
+
+/* botão seta */
+.arrows button {
+    width: 40px;
+    height: 30px;
+    border-radius: 80%;
+    background-color: rgba(242, 227, 227, 0.25);
+    border: none;
+    font-family: monospace;
+    color: #fff;
+    font-weight: bold;
+    font-size: large;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+
+.arrows button:hover {
+    background-color: #eee;
+    color: #e05403;
+}
+
+.carousel.next .list {
+    transform: translateX(-100%);
+}
+
+.carousel.prev .list {
+    transform: translateX(100%);
+}
+
+.time {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    animation: timeRunning 7s linear forwards;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+    animation: timeRunning 7s linear forwards;
+}
+
+@keyframes timeRunning {
+    to {
+        width: 0;
+    }
+}
+
+/* ANIMAÇÕES ADICIONAIS */
+.carousel .list .item .content {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s forwards;
+}
+
+@keyframes showContent {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.carousel .list .item:nth-child(1) .title {
+    animation-delay: 1.2s;
+}
+
+.carousel .list .item:nth-child(1) .topic {
+    animation-delay: 1.4s;
+}
+
+.carousel .list .item:nth-child(1) .des {
+    animation-delay: 1.6s;
+}
+
+.carousel .list .item:nth-child(1) .buttons {
+    animation-delay: 1.8s;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carousel .list .item .content {
+        width: 90%;
+        padding-right: 20%;
+        top: 10%;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 3em;
+    }
+
+    .carousel .list .item .content .topic {
+        font-size: 2em;
+    }
+
+    .thumbnail {
+        bottom: 30px;
+        transform: translateX(-50%);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .thumbnail .item {
+        width: 120px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 10px;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 2em;
+    }
+
+    .carousel .list .item .content .topic {
+        font-size: 1.5em;
+    }
+
+    .thumbnail .item {
+        width: 100px;
+        height: 150px;
+    }
+}
+
+
+
+.content {
+    color: #ffffff; /* Cor do texto da div content */
+}
+
+.title {
+    color: #ffffff; /* Cor específica para o título */
+}
+
+.des {
+    color: #f8e7e7; /* Cor para a descrição */
+    font-size: 1.2rem; /* Ajuste o tamanho do texto */
+    font-family: 'Arial', sans-serif; /* Alterar a fonte */
+}

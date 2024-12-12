@@ -1,0 +1,89 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container para manter o conteúdo centralizado */
+.container {
+   
+    color: #333; /* Cor do texto */
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    text-transform: uppercase; /* Todas as letras maiúsculas */
+    letter-spacing: 1.5px; /* Espaçamento entre as letras */
+    position: relative; /* Necessário para a linha decorativa */
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Seção de feedback */
+#feedback {
+    background-color: #ff7002a9;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.feedback-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px; /* Adiciona um pouco de padding para a área interna */
+}
+
+/* Feedback card */
+.feedback-card {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de movimento quando o mouse passa sobre o card */
+.feedback-card:hover {
+    transform: translateY(-10px); /* Move o card para cima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+.feedback-card p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 15px;
+    text-transform: lowercase; /* Garante que o texto fique em letras minúsculas */
+}
+
+.feedback-card span {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .feedback-cards {
+        justify-content: center; /* Centraliza os cards em telas menores */
+        padding: 0 10px; /* Reduz o padding lateral */
+    }
+
+    .feedback-card {
+        max-width: 100%; /* Permite que os cards ocupem toda a largura disponível */
+        margin-bottom: 20px; /* Adiciona espaçamento entre os cards */
+    }
+}

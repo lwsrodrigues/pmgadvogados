@@ -1,0 +1,63 @@
+/* Ajustando o mapa */
+.map {
+    display: block; /* Garante que o mapa seja tratado como um bloco */
+    width: 100%; /* O mapa ocupará toda a largura disponível */
+    max-width: 800px; /* Largura máxima do mapa */
+    height: 400px; /* Altura do mapa */
+    background: #ccc; /* Placeholder para o mapa */
+    margin: 20px auto; /* Distância superior e inferior, e centralização automática */
+    border-radius: 70px;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1); /* Adicionando sombra ao redor */
+}
+
+/* Responsividade - O mapa ficará com largura 100% em telas menores */
+@media (max-width: 768px) {
+    .map {
+        width: 100%; /* Mapa ocupará toda a largura disponível em telas menores */
+        height: 250px; /* Diminui a altura em dispositivos móveis */
+    }
+}
+
+@media (max-width: 400px) {
+    .map {
+        width: 100%; /* Mapa ocupará 100% da largura disponível */
+        height: 200px; /* Ajusta a altura ainda mais em telas menores */
+    }
+}
+
+
+/* Seção de localização */
+
+
+/* Estilizando os parágrafos */
+
+
+/* Ajustando o mapa */
+.map {
+    display: block;
+    width: 700%;
+    max-width: 900px; /* Largura máxima do mapa */
+    height: 400px; /* Altura do mapa */
+    margin: 90px auto; /* Centraliza o mapa */
+    border-radius: 10px;
+
+}
+
+/* Responsividade - Ajustes para telas menores */
+@media (max-width: 768px) {
+    #localizacao {
+        padding: 20px; /* Menos padding em telas menores */
+    }
+
+    .map {
+        width: 100%; /* O mapa ocupa toda a largura disponível */
+        height: 250px; /* Ajusta a altura para dispositivos menores */
+    }
+
+    #localizacao p {
+        font-size: 1rem; /* Menor fonte para telas pequenas */
+        line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
+    }
+}
+
+
