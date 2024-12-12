@@ -126,7 +126,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/image/70cb658a-9c7a-4854-9340-e12045bb973a.png') no-repeat center center;
+    background: url('../image/70cb658a-9c7a-4854-9340-e12045bb973a.png') no-repeat center center;
+
+
     background-size: cover;
     background-attachment: fixed;
     z-index: -1; /* Garante que a imagem fique atrás do conteúdo */
