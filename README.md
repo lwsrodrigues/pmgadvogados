@@ -5,6 +5,14 @@ Este projeto é uma landing page desenvolvida para um escritório de advocacia, 
 
 ---
 
+## 📸 Spoiler do Projeto
+
+> Veja abaixo uma prévia da página:
+
+![Tela de Login](./landingpageadv.png)
+
+---
+
 ## 🚀 Funcionalidades  
 - **Seção de Serviços Jurídicos:** Apresentação detalhada das áreas de atuação, como Direito Civil, Trabalhista, Penal, e Empresarial.  
 - **Equipe de Advogados:** Perfil dos advogados com informações sobre suas especializações.  
